@@ -2,5 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import './routers/AppRouter';
+import AppRouter from './routers/AppRouter';
 
-ReactDOM.render(<p>This is my boilerplate</p>, document.getElementById('app'));
+ReactDOM.render(<AppRouter/>, document.getElementById('app'));
