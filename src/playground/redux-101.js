@@ -1,4 +1,4 @@
-import { createStore } from 'redux'
+import { createStore } from 'redux';
 
 //Action generator - are functions that creates action objects
 const incrementCount = ({incrementBy = 1} = {}) => ({
