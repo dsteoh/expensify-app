@@ -5,11 +5,16 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm install && npm run build:prod"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -23,6 +28,7 @@
     "enzyme-to-json": "^3.4.0",
     "jest": "^24.9.0",
     "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "normalize": "^0.3.1",
