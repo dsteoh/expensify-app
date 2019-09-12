@@ -65,7 +65,6 @@ test('should add expense to database and store', (done) => {
                 ...expenseData
             }
         });
-
         return database.ref(`expenses/${action[0].expense.id}`).once('value');
     }).then((snapshot) => {
         expect(snapshot.val()).toEqual(expenseData);

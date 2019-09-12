@@ -8,6 +8,7 @@ export const startLogin = () => {
 
 export const startLogout = () => {
     return () => {
-        return firebase.auth(())
+        return firebase.auth().signOut();
     };
 };
+
